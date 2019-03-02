@@ -14,7 +14,7 @@ def dictionary
 end
 
 def word_substituter(tweet)
-  tweet.split(//).map do |word|
+  tweet.split("  ").map do |word|
     dictionary.keys.include?(word.downcase) ? word = dictionary[word.downcase] : word
   end.join(" ")
 end
